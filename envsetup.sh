@@ -154,11 +154,11 @@ function check_product()
         return
     fi
     if (echo -n $1 | grep -q -e "^conquer_") ; then
-        conquer_BUILD=$(echo -n $1 | sed -e 's/^conquer_//g')
+        CONQUER_BUILD=$(echo -n $1 | sed -e 's/^conquer_//g')
     else
-        conquer_BUILD=
+        CONQUER_BUILD=
     fi
-    export conquer_BUILD
+    export CONQUER_BUILD
 
         TARGET_PRODUCT=$1 \
         TARGET_BUILD_VARIANT= \
